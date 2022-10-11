@@ -38,19 +38,33 @@ describe('Validacion de letras y palabras', () => {
       expect(juego.ValidarPalabra(arriesgo)).toBe(true);
     })
 
-    test(' VALIDA VIDAS - Debe devolver la cantidad de intentos (vidas) que nos quedan ' , async () => {
+    test('VALIDA VIDAS - Debe devolver true si todavia tenemos vidas' , async () => {
       const palabraSecreta= "secretword";
       const juego = new LogicAhorcado(palabraSecreta);
-      expect(juego.ValidarVida()).toBe(true);
+      expect(juego.ValidarVidas()).toBe(true);
     })
 
-    test(' VALIDA  - Debe devolver la cantidad de intentos (vidas) que nos quedan ' , async () => {
+    test(' VALIDA SI PODEMOS SEGUIR JUGANDO - Debe devolver false cuando nos gastamos todas las vidas ' , async () => {
       const palabraSecreta= "secretword";
       const juego = new LogicAhorcado(palabraSecreta);
       let letras = ['x','y','z','q','ñ','v']
       letras.forEach(l => juego.ValidarLetra(l));
-      expect(juego.ValidarVida()).toBe(false);
+      expect(juego.ValidarVidas()).toBe(false);
     })
+
+    test(' VALIDA LETRA CORRECTA EN POSICION RANDOM ' , async () => {
+      const palabraSecreta= "secretword";
+      const juego = new LogicAhorcado(palabraSecreta);
+      let letra = 't'
+      expect(juego.ValidarLetra(letra)).toBe(true);
+    })
+
+    test('MUESTRA RESULTADO PARCIAL' , async () => {
+      const palabraSecreta= "secretword";
+      const juego = new LogicAhorcado(palabraSecreta);
+      expect(juego.MuestraResultado()).toBe('_ _ _ _ _ _ _ _ _ _ ');
+    })
+
 
   })  
 
