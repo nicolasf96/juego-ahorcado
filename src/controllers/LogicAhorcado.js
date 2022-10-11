@@ -1,16 +1,20 @@
 class LogicAhorcado {
     constructor(palabraSecreta) {
         this.palabraSecreta = palabraSecreta;
-        this.vida = 6;
+        this.vidas = 6;
         this.letrasCorrectas;
         this.letrasIncorrectas;
     }
 
     ValidarLetra(letra){
-        if(this.palabraSecreta.indexOf(letra)==0){
-            return true;
-        }else{
-            return false;
+        if(this.ValidarVida){
+            if(this.palabraSecreta.indexOf(letra)==0){
+                return true;
+            }else{
+                this.vidas = this.vidas -1;
+                return false;
+            }
+            
         }
     }
 
@@ -19,6 +23,14 @@ class LogicAhorcado {
             return true;
         }else{
             return false;
+        }
+    }
+
+    ValidarVida(){
+        if(this.vidas>=1){
+            return true
+        }else{
+            return false
         }
     }
 
