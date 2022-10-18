@@ -1,0 +1,16 @@
+name: Principal
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  ahorcado_tests:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Run npm test
+        run: npm test
+
+
