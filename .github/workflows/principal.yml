@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: initialization
-      - uses:  actions/checkout@v2
-      - uses: actions/setup-node@v1
+        uses:  actions/checkout@v2
+
+      - name: second step
+        uses: actions/setup-node@v1
         with:
           node-version: 16.14.2
         run: npm ci
+        
       - name: Run npm test
         run: npm test
 
