@@ -10,20 +10,17 @@ jobs:
   ahorcado_tests:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with: 
+        node-version: "14.x"
 
-      - name: first step
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+    - name: Install dependencies
+      run: npm install
 
-
-      - name: Run npm install
-        run: npm install --no-audit --no-fund --no-optional
-      
-      - name: Run npm test
-        run: npm test
+    - name: Run test
+      run: npm test
 
 
