@@ -1,4 +1,3 @@
-import app from '../src/app';
 import request from 'supertest'
 import { exportAllDeclaration } from '@babel/types';
 import LogicAhorcado from '../src/controllers/LogicAhorcado.js'
