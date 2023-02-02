@@ -1,5 +1,10 @@
-import assert  from 'assert';
-import cucumber from 'cucumber'
+//import assert  from 'assert';
+//import cucumber from 'cucumber'
+
+
+// support.js
+const { assert } = require('assert');
+const { cucumber } = require('cucumber');
 
 function isItFriday(today) {
   // We'll leave the implementation blank for now
