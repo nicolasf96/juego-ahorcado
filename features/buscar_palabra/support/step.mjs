@@ -1,6 +1,7 @@
 
-const { Given, When, Then } = require("@cucumber/cucumber");
-const { Builder, By, Key, until } = require("selenium-webdriver");
+import { Given, When, Then } from "@cucumber/cucumber";
+import { Builder, By, Key, until } from "selenium-webdriver";
+
 
 Given("abro la página de Google", async function() {
   this.driver = await new Builder().forBrowser("chrome").build();
