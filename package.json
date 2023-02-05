@@ -7,8 +7,7 @@
   "scripts": {
     "test-jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "test-cucumber": "cucumber-js",
-    "test-sele": "node tests/atest.js",
-    "test": "npm run test-jest && npm run test-cucumber && npm run test-sele"
+    "test": "npm run test-jest && npm run test-cucumber"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,7 @@
     "chromedriver": "^107.0.2",
     "express": "^4.18.2",
     "geckodriver": "^3.2.0",
-    "selenium-webdriver": "^4.5.0"
+    "selenium-webdriver": "4.8"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^8.7.0",

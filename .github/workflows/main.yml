@@ -1,0 +1,25 @@
+name: Selenium Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: |
+        npm ci
+        npm i selenium-webdriver@4.8
+        npm i chromedriver@107.0.2
+    - name: Run tests
+      run: |
+        npx cucumber-js
