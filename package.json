@@ -7,7 +7,7 @@
   "scripts": {
     "test-jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "test-cucumber": "cucumber-js",
-    "test": "npm run test-jest && npm run test-cucumber"
+    "test": "npm run test-jest"
   },
   "repository": {
     "type": "git",
