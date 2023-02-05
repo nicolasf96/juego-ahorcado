@@ -7,11 +7,11 @@ Given("abro la página de Google", async function() {
   await this.driver.get("https://www.google.com/");
 });
 
-When("busco la palabra {string}", async function(searchTerm) {
+When("busco la palabra Voxed", async function(searchTerm) {
   const searchBox = await this.driver.findElement(By.name("q"));
   await searchBox.sendKeys(searchTerm, Key.RETURN);
 });
 
-Then("veo resultados relevantes para la búsqueda {string}", async function(searchTerm) {
+Then("veo resultados relevantes para la búsqueda Voxed", async function(searchTerm) {
   await this.driver.wait(until.titleContains(searchTerm));
 });
