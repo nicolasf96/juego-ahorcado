@@ -1,0 +1,23 @@
+<div class="ahorcado">
+  <app-ahorcado-display
+    *ngIf="resetDisplay"
+    [intentos]="intentos"
+    [palabra]="palabra"
+    (juegoFinalizado)="juegoFinalizado()"
+  ></app-ahorcado-display>
+  <div *ngIf="!resetDisplay">Juego Terminado</div>
+  <app-ahorcado-display-win *ngIf="!resetDisplay"></app-ahorcado-display-win>
+  <ng-container *ngIf="!restartGameBtnShown; else restartGameBtn">
+    <app-ahorcado-letras [palabraOculta]="palabraOculta"></app-ahorcado-letras>
+    <app-ahorcado-keyboard
+      (keyPressed)="adivinar($event)"
+      [palabra]="palabra"
+    ></app-ahorcado-keyboard>
+  </ng-container>
+</div>
+
+<ng-template #restartGameBtn>
+  <button class="btn" (click)="reset()">
+    {{ ">>Restart Game\<\<" }}
+  </button>
+</ng-template>
