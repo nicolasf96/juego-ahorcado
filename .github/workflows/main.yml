@@ -15,8 +15,6 @@ jobs:
       with:
         node-version: 18
 
-    - run: cd ./backend
-
     - name: Install dependencies
       run: |
         npm ci
