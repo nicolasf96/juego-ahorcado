@@ -22,4 +22,4 @@ jobs:
         npm i chromedriver@107.0.2
     - name: Run tests
       run: |
-        npx cucumber-js
+        npm run test
