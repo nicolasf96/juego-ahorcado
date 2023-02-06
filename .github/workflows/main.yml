@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - run: ls
+    - run: ls -la
+    - run: pwd
     - uses: actions/checkout@v3
     - name: Use Node.js
       uses: actions/setup-node@v3
