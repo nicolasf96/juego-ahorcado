@@ -7,9 +7,9 @@ jobs:
   build_backend:
     name: Build Backend
     runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: backend
+    defaults:
+      run:
+        working-directory: backend
 
     steps:
     - uses: actions/checkout@v3
