@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: cd ../../
+    - run: cd ../../../
     - run: ls
     - run: ls -la
     - run: pwd
