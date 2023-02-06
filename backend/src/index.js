@@ -1,7 +1,15 @@
 import express, { json } from "express";
 const app = express();
 
-app.use(json());
-app.listen(3000,()=>{
-    console.log('Server running on PORT 3000')
+import router from './router/ahorcado.js'
+
+
+app.use(express.json())
+
+const port=process.env.PORT || 3000;
+
+app.use("/", router)
+
+app.listen(port,()=>{
+    console.log("hola mundo")
 });
