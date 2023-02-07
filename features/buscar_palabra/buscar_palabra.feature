@@ -5,5 +5,5 @@ Feature: Buscar palabra en Google
 
   Scenario: Buscar palabra en Google
     Given abro la página de Google
-    When busco la palabra "Angular"
-    Then veo resultados relevantes para la búsqueda "Angular"
+    When busco la palabra "playwright"
+    Then veo resultados relevantes para la búsqueda "playwright"
