@@ -7,7 +7,7 @@ let  page;
 
 Given("abro la página del ahorcado", async function() {
 
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     page = await context.newPage();
     await page.goto('http://localhost:3000/');
