@@ -6,7 +6,7 @@ let  browser;
 let  page;
 
 Given('abro la página de Google', async () => {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     page = await context.newPage();
     await page.goto('https://www.google.com.ar');
