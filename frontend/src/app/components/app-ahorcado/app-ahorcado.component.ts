@@ -14,6 +14,7 @@ export class AppAhorcadoComponent {
   palabraOculta:string='';
   restartGameBtnShown = false;
   resetDisplay=true;
+  name:any;
   constructor(
     private ahorcadoService: AhorcadoService,
     private location: Location
@@ -24,6 +25,7 @@ export class AppAhorcadoComponent {
       this.palabra =data.palabra;
       this.palabraOculta=data.oculta;
       localStorage.setItem('gameId', data.id);
+      this.name=localStorage.getItem('name')
     })
   }
   

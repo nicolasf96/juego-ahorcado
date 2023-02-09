@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<div class="columns">
+    <div class="column has-text-centered">
+        <h1 class="title is-2">Juego Nuevo</h1>
+        <form action=""></form>
+        <div class="field">
+            <label class="label">Ingrese su Nombre</label>
+            <div class="control">
+              <input class="input" [(ngModel)]='name' type="text" placeholder="Ej: Ahorcadito">
+              <button  *ngIf='name' class="button is-primary" type="button" (click)="setName()">Comenzar!</button>
+            </div>
+        </div>
+        <link rel="stylesheet" href="">
+    </div>
+</div>

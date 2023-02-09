@@ -1,4 +1,5 @@
 <div class="ahorcado">
+  <p>Hola {{name}}!</p>
   <app-ahorcado-display
     *ngIf="resetDisplay"
     [intentos]="intentos"
@@ -21,3 +22,5 @@
     {{ ">>Restart Game\<\<" }}
   </button>
 </ng-template>
+
+<a routerLink="/">Cambiar Jugador</a>
