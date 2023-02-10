@@ -25,6 +25,10 @@ jobs:
       run: npm run testGanar
     - name: Test perder
       run: npm run testPerder
+    - name: Test vidas
+      run: npm run testVidas
+    - name: Test login
+      run: npm run testLogin
     - uses: actions/upload-artifact@v3
       if: always()
       with:
