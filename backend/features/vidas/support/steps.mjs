@@ -5,7 +5,7 @@ let  browser;
 
 let  page;
 
-Given("abro la página del ahorcado", async function() {
+Given("abrir la página del ahorcado", async function() {
 
     browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
@@ -15,13 +15,13 @@ Given("abro la página del ahorcado", async function() {
 });
 
 
-When("ingreso la letra {string}", async function(letter) {
+When("ingreso letra {string}", async function(letter) {
     const letra = letter;
     const boton = await page.getByTitle(letra);
     await boton.click();
 });
 
-Then("observo los resultados relevantes al ganar", async function() {
-    await page.screenshot({ path: 'fotos/ganar/screenshot.png' });
+Then("observo los resultados relevantes al perder 3 vidas", async function() {
+    await page.screenshot({ path: 'fotos/perder/screenshot.png' });
     await browser.close();
 });
