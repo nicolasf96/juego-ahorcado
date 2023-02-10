@@ -10,5 +10,5 @@ Feature: Perder Juego ahorcado
     And ingreso letra "P"
     And ingreso letra "Z"
     And ingreso letra "X"
-    And ingreso letra "U"
+    And ingreso letra "I"
     Then observo los resultados relevantes al perder

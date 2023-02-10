@@ -10,7 +10,7 @@ Given("abrir la página del ahorcado", async function() {
     browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto('http://localhost:3000/');
+    await page.goto('http://localhost:3000/ahorcado');
 
 });
 
@@ -22,6 +22,6 @@ When("ingreso letra {string}", async function(letter) {
 });
 
 Then("observo los resultados relevantes al perder", async function() {
-    await page.screenshot({ path: 'screenshot.png' });
+    await page.screenshot({ path: 'fotos/perder/screenshot.png' });
     await browser.close();
 });

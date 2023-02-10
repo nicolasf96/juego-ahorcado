@@ -11,7 +11,9 @@
     "test": "npm run test-jest",
     "testPalabra": "cucumber-js features/buscar_palabra/buscar_palabra.feature",
     "testGanar": "cucumber-js features/ganar/ganar.feature",
-    "testPerder": "cucumber-js features/perder/perder.feature"
+    "testPerder": "cucumber-js features/perder/perder.feature",
+    "testLogin": "cucumber-js features/login/login.feature",
+    "testVidas": "cucumber-js features/vidas/vidas.feature"
   },
   "repository": {
     "type": "git",
