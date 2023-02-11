@@ -23,7 +23,10 @@ export class AhorcadoLetrasComponent {
     if(gameId!=null){
       this.ahorcadoService.estadoJuego(gameId).subscribe((data: any)=>{
       console.log(data.oculta);
-      this.palabraOculta=data.oculta
+      if(data.isFinished==false){
+        this.palabraOculta=data.oculta
+      }
+      //this.palabraOculta=data.oculta
     })
     }
     
