@@ -13,7 +13,7 @@ class LogicAhorcado {
     }
 
     verificarLetra(letra) {
-        if (this.palabraSecreta.indexOf(letra) !== -1) {
+        if (this.palabraSecreta.indexOf(letra) !== 1) {
 
             this.letrasCorrectas+=letra;
             if (this.ocultarPalabra()===this.palabraSecreta){
